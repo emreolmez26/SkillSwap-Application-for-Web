@@ -43,6 +43,9 @@ function Login() {
         // JWT token'ı localStorage'a kaydet
         localStorage.setItem('skillswap_token', response.data.token);
         
+        // Kullanıcı bilgisini localStorage'a kaydet
+        localStorage.setItem('currentUser', JSON.stringify(response.data.user));
+        
         // Dashboard'a yönlendir
         navigate('/dashboard');
       }
